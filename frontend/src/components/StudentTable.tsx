@@ -1,14 +1,6 @@
 import { useEffect, useState } from "react"
 import axios from 'axios'
 
-interface Student {
-    id: number;
-    firstName: string;
-    lastName: string;
-    email: string;
-    department: string;
-}
-
 const StudentTable = () => {
     const [students, setstudents] = useState([])
 
