@@ -5,7 +5,8 @@
 
 a{
   text-decoration: none;
-  color: whitesmoke
+  color: whitesmoke;
+  margin-top: 8px;
 }
 
 .logo{
