@@ -8,6 +8,7 @@ import {
 } from "react-router-dom"
 import ViewAllStudents from './pages/ViewAllStudents.tsx'
 import AddStudentPage from './pages/AddStudentPage.tsx'
+import EditStudentPage from './pages/EditStudentPage.tsx'
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,12 @@ const router = createBrowserRouter([
     element: (
       <AddStudentPage
       />
+    )
+  },
+  {
+    path: "/edit-student/:id",
+    element: (
+      <EditStudentPage/>
     )
   }
 ])

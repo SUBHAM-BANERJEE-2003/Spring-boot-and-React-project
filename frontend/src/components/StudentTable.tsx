@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
-import axios from 'axios'
 import { FaEdit, FaEye, FaTrashAlt } from "react-icons/fa"
 import { Link } from "react-router-dom"
+import axios from 'axios'
 
 const StudentTable = () => {
     const [students, setstudents] = useState([])
@@ -22,6 +22,12 @@ const StudentTable = () => {
             setstudents(result.data)
         setstudents(result.data)
     }
+
+    const handleDeleteStudent = async (id?: number) => {
+        await axios.delete(`http://localhost:8180/student/delete/${id}`)
+        loadStudents()
+    }
+    
     return (
         <section className="container">
             <table className="table table-bordered table-hover">
@@ -54,7 +60,7 @@ const StudentTable = () => {
                             </Link>
                             </td>
                             <td className="mx-2">
-                            <button className="btn btn-danger">    
+                            <button className="btn btn-danger" onClick={() => handleDeleteStudent(student.id)}>    
                                 <FaTrashAlt/>
                             </button>
                             </td>
