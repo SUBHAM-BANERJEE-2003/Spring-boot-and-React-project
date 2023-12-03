@@ -1,12 +1,17 @@
 .navbar{
   display: flex;
   background-color: rgb(50, 49, 49);
+  margin-bottom: 10px;
 }
 
 a{
   text-decoration: none;
   color: whitesmoke;
   margin-top: 8px;
+}
+
+a:active{
+  color: blue;
 }
 
 .logo{
@@ -34,6 +39,7 @@ a{
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+  box-shadow: rgb(62, 61, 61);
 }
 
 .table th, .table td {
@@ -84,4 +90,61 @@ a{
 
 .mx-2 {
   margin: 0 2px;
+}
+
+.footer{
+  position: absolute;
+  color: whitesmoke;
+
+  width: 97.7%;
+  background-color: rgb(26, 25, 25);
+  padding: 10px;
+  text-align: center;
+  border-top: 1px solid gray;
+}
+
+.formpage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.formbody {
+  width: 400px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #534c4c;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.input-group input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-group{
+  display: flex;
+  gap: 20px;
 }

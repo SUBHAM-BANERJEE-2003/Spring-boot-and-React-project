@@ -6,7 +6,8 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom"
-import StudentTable from './components/StudentTable.tsx'
+import ViewAllStudents from './pages/ViewAllStudents.tsx'
+import AddStudentPage from './pages/AddStudentPage.tsx'
 
 const router = createBrowserRouter([
   {
@@ -18,13 +19,14 @@ const router = createBrowserRouter([
   {
     path: "/view-students",
     element: (
-      <StudentTable/>
+      <ViewAllStudents/>
     ),
   },
   {
     path: "/add-students",
     element: (
-      <StudentTable/>
+      <AddStudentPage
+      />
     )
   }
 ])
