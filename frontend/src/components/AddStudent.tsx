@@ -12,9 +12,7 @@ const AddStudent = () => {
     });
 
     const handleInputChange = (e: ChangeEvent<HTMLInputElement>): void => {
-        console.log("Before update:", student);
         Setstudent({ ...student, [e.target.name]: e.target.value });
-        console.log("After update:", student);
     };
 
     const saveStudent = async (e: FormEvent) => {
