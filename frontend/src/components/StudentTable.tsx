@@ -2,10 +2,11 @@ import { useEffect, useState } from "react"
 import { FaEdit, FaEye, FaTrashAlt } from "react-icons/fa"
 import { Link } from "react-router-dom"
 import axios from 'axios'
+import Searchbar from "./Searchbar"
 
 const StudentTable = () => {
     const [students, setstudents] = useState([])
-
+    const [search, setsearch] = useState("")
     useEffect(() => {
         loadStudents();
     }, [])
@@ -29,6 +30,8 @@ const StudentTable = () => {
     }
     
     return (
+        <>
+        <Searchbar search={search} setSearch={setsearch}/>
         <section className="container">
             <table className="table table-bordered table-hover">
                 <thead>
@@ -42,7 +45,10 @@ const StudentTable = () => {
                     </tr>
                 </thead>
                 <tbody className="text-center">
-                    {students.map((student: Student, index) => (
+                    {students.filter((st: Student)=>
+                         st.firstName.toLowerCase().includes(search)
+                    )
+                    .map((student: Student, index) => (
                         <tr key={student.id}>
                             <th scope="row">{index + 1}</th>
                             <td>{student.firstName}</td>
@@ -69,7 +75,7 @@ const StudentTable = () => {
                 </tbody>
             </table>
         </section>
-
+        </>
     )
 }
 

@@ -9,6 +9,7 @@ import {
 import ViewAllStudents from './pages/ViewAllStudents.tsx'
 import AddStudentPage from './pages/AddStudentPage.tsx'
 import EditStudentPage from './pages/EditStudentPage.tsx'
+import StudentProfilePage from './pages/StudentProfilePage.tsx'
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,12 @@ const router = createBrowserRouter([
     path: "/edit-student/:id",
     element: (
       <EditStudentPage/>
+    )
+  },
+  {
+    path: "/student-profile/:id",
+    element: (
+      <StudentProfilePage/>
     )
   }
 ])

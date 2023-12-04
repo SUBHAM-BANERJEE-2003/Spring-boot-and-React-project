@@ -6,8 +6,8 @@
 
 a{
   text-decoration: none;
-  color: whitesmoke;
   margin-top: 8px;
+  color:white;
 }
 
 a:active{
@@ -15,12 +15,10 @@ a:active{
 }
 
 .logo{
-  margin-top: 8px;
   margin-left: 10px;
   font-weight: bolder;
   color: whitesmoke;
   font-size: 15px;
-  margin-left: 8px;
 }
 .navlist{
   display: flex;
@@ -92,6 +90,10 @@ a:active{
   margin: 0 2px;
 }
 
+.input-group-text{
+  color: #ddd;
+}
+
 .footer{
   position: absolute;
   color: whitesmoke;
@@ -105,6 +107,7 @@ a:active{
 
 .formpage {
   display: flex;
+  margin-top: -30px;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -116,7 +119,7 @@ a:active{
   border: 1px solid #ddd;
   border-radius: 8px;
   background-color: #534c4c;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .input-group {
@@ -147,4 +150,56 @@ a:active{
 .btn-group{
   display: flex;
   gap: 20px;
+}
+
+.form-heading{
+  display: flex;
+  font-family: Oxygen;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-page{
+  height: 100%;
+  margin: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+
+.welcome-message{
+  text-align: center;
+  font-size: 2em; 
+  color: #333; 
+  font-weight: bold;
+}
+
+.search-bar-container {
+  display: flex;
+  align-items: center;
+  max-width: 270px;
+  margin: 0 auto;
+  background-color: #fff; /* Adjust background color as needed */
+  border: 1px solid #ccc; /* Adjust border as needed */
+  border-radius: 5px; /* Adjust border-radius as needed */
+  padding: 5px;
+}
+
+.searchicondiv {
+  padding: 8px;
+  border-right: 1px solid #ccc; 
+  color: #555; 
+}
+
+.form-control {
+  flex: 1;
+  border: none;
+  padding: 8px;
+  font-size: 16px;
+  outline: none;
+}
+
+.form-control:focus {
+  border: 2px solid #007bff; 
 }

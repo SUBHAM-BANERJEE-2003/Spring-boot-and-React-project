@@ -31,6 +31,8 @@ const EditStudent = () => {
         navigate("/view-students")
     }
     return (
+        <>
+        <h2 className="form-heading">EDIT STUDENT</h2>
         <div className="formpage">
             <form className="formbody" onSubmit={(e) => updateStudent(e)}>
                 <div className="input-group">
@@ -104,6 +106,7 @@ const EditStudent = () => {
                 </div>
             </form>
         </div>
+        </>
     )
 }
 

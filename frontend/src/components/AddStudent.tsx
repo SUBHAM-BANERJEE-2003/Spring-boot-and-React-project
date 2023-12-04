@@ -20,7 +20,8 @@ const AddStudent = () => {
         await axios.post("http://localhost:8180/student", student)
         navigate("/view-students")
     }
-    return (
+    return (<>
+        <h2 className="form-heading">ADD A STUDENT</h2>
         <div className="formpage">
             <form className="formbody" onSubmit={(e) => saveStudent(e)}>
                 <div className="input-group">
@@ -89,11 +90,12 @@ const AddStudent = () => {
                     </div>
                     <div className="btn-group">
                         <button className="btn btn-info" type="submit">Save</button>
-                        <button className="btn btn-danger" type="reset">Refresh</button>
+                        <button className="btn btn-danger" type="reset">Back</button>
                     </div>
                 </div>
             </form>
         </div>
+        </>
     )
 }
 
